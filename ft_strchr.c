@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 15:03:27 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/11 18:49:29 by arpenel          ###   ########.fr       */
+/*   Created: 2024/11/12 15:56:34 by arpenel           #+#    #+#             */
+/*   Updated: 2024/11/12 16:22:24 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
-	i = 0;
-	if (!dest || !src)
-		return (NULL);
-	while (i < n)
+	i = 0; 
+	while (s[i])
 	{
-		((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
+		if (s[i] == (char)c)
+			return (&s[i]);
 		i++;
 	}
-	return (dest);
+	if (c == '\0')
+		return (&s[i]);
+	return (NULL);
 }
