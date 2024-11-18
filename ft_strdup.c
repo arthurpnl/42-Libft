@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 14:27:57 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/18 15:20:34 by arpenel          ###   ########.fr       */
+/*   Created: 2024/11/18 15:44:27 by arpenel           #+#    #+#             */
+/*   Updated: 2024/11/18 16:15:46 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-int ft_atoi(const char *nptr)
+char    *ft_strdup(const char *s)
 {
+    char    *str;
     int i;
-    int neg;
-    int res;
 
     i = 0;
-    neg = 1;
-    res = 0;
-    while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t' || nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\z')
-        i++;
-    if (nptr[i] == '-' || nptr[i] == '+')
+
+    if(str = malloc(sizeof(const char) * ft_strlen(s) + 1))
     {
-        if(nptr[i] == '-')
-            neg *= -1;
+        str[ft_strlen(s)] = '\0';
+    }
+    else
+        return (NULL);
+    while(s[i])
+    {
+        str[i] = s[i];
         i++;
     }
-    while (nptr[i] >= 48 && nptr[i] <= 57)
-    {
-        res = res * 10 + (nptr[i] - 48);
-        i++;
-    }
-    return (res * neg);
+    return (str);
 }
