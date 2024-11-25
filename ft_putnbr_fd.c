@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 16:31:24 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 17:09:45 by arpenel          ###   ########.fr       */
+/*   Created: 2024/11/25 16:56:45 by arpenel           #+#    #+#             */
+/*   Updated: 2024/11/25 17:09:26 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	long int	nb;
 
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
+	nb = n;
+	if (nb < 0)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		nb *= -1;
+		ft_putchar_fd('-', fd);
 	}
+	if (nb >= 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	ft_putnbr_fd((nb % 10) + '0', fd);
 }
