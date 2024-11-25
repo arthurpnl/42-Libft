@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:34:42 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 12:52:51 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/11/25 12:54:04 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_count(int n)
 	size_t	i;
 
 	i = 0;
-	if(n == 0)
+	if (n == 0)
 		return (1);
 	while (n != 0)
 	{
@@ -30,8 +30,8 @@ int	ft_count(int n)
 
 char	*ft_itoa(int n)
 {
-	char    *res;
-	size_t  count;
+	char	*res;
+	size_t	count;
 	long int	number;
 
 	number = n;
