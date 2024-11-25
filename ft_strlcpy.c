@@ -6,13 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 00:34:51 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/12 01:46:03 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/11/25 17:29:10 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 /*
 size_t	ft_strlen(const char *str)
