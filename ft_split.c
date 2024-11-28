@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:34:25 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 15:46:27 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/11/28 08:27:01 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static int is_it_sep(char c, char sep)
+static int	is_it_sep(char c, char sep)
 {
 	if (c == sep)
 		return (1);
 	return (0);
 }
 
-static int count_words(char *str, char sep)
+static int	count_words(char *str, char sep)
 {
 	size_t	i;
 	size_t	words;
@@ -74,7 +74,6 @@ char	**ft_split(const char *s, char sep)
 	res = malloc(sizeof(char *) * (count_words((char *)s, sep) + 1));
 	if (!s)
 		return (0);
-	
 	i = 0;
 	j = 0;
 	while (s[i])

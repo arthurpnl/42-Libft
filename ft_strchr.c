@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:56:34 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/12 16:45:25 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/11/28 08:28:56 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
-	i = 0; 
+	i = 0;
 	while (s[i])
 	{
 		if (s[i] == (char)c)
