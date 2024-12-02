@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 08:43:38 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 13:01:42 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 12:50:55 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,3 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-// Bonus functions //
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;

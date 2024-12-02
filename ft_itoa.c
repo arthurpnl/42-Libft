@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:34:42 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 08:34:03 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 13:01:13 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,5 @@ char	*ft_itoa(int n)
 		res[--count] = number % 10 + 48;
 		number /= 10;
 	}
-	if (n < 0)
-		res[0] = '-';
 	return (res);
 }
