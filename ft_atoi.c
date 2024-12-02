@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:27:57 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 14:36:53 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 17:19:49 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	neg = 1;
 	res = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t'
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i])
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || (nptr[i] == 32))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{

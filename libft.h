@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 08:43:38 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 15:06:47 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 17:26:00 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 void	ft_bzero(void *s, size_t n);
 
 // additional functions //
-char	    *ft_substr(char *s, unsigned int start, size_t len);
+char	    *ft_substr(char const *s, unsigned int start, size_t len);
 char	    *ft_strjoin(char const *s1, char const *s2);
 char	    *ft_strtrim(char const *s1, char const *set);
 char	    **ft_split(const char *s, char sep);
