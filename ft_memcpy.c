@@ -6,11 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:03:27 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/11 18:49:29 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:18:41 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:23:34 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 08:32:07 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:18:06 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlih.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

@@ -6,11 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:33:25 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/11 18:41:24 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:18:43 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

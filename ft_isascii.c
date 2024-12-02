@@ -6,11 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:15:42 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 08:24:25 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:18:16 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

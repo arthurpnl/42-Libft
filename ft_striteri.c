@@ -6,13 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:39:24 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 16:18:38 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:19:17 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

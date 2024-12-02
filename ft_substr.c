@@ -6,16 +6,15 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:31:53 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 08:37:21 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:37:52 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	char	*str;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 08:43:38 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 12:50:55 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 15:06:47 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <stddef.h>
 
 // libc functions //
 void	    *ft_memset(void *s, int c, size_t n);
@@ -46,9 +47,11 @@ char	    *ft_strjoin(char const *s1, char const *s2);
 char	    *ft_strtrim(char const *s1, char const *set);
 char	    **ft_split(const char *s, char sep);
 char	    *ft_itoa(int n);
-char	ft_strmapi(char const *s, char *(f)(unsigned int, char));
+char	    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+#endif 

@@ -6,9 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:56:45 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 17:09:26 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:19:02 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

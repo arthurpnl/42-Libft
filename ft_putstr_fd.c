@@ -6,9 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:31:24 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 17:09:45 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:19:06 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

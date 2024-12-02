@@ -6,13 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 17:27:07 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/21 14:34:15 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:39:03 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -31,5 +29,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		j--;
 	}
-	return (ft_substr(s1, 0, j + 1));
+	return (ft_substr((char *)s1, 0, j + 1));
 }

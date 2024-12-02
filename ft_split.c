@@ -6,13 +6,11 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:34:25 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 08:27:01 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:19:10 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	is_it_sep(char c, char sep)
 {
