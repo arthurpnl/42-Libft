@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:31:53 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 17:26:28 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 17:37:41 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (str);
 	}
 	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	while (i < len)
 	{
-		str[i] = (char)s[i];
+		str[i] = s[start + i];
 		i++;
 	}
 	str[i] = '\0';
