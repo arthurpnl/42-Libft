@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:50:11 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/28 08:40:47 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:15:50 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	ctf;
 	size_t			i;
 
-	*ptr = (unsigned char *)s;
+	ptr = (unsigned char *)s;
 	ctf = (unsigned char)c;
 	i = 0;
 	if (n == 0)

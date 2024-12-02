@@ -6,54 +6,57 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:34:42 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 13:01:13 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/02 14:11:27 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_count(int n)
+long	find_size(long nb)
 {
-	size_t	i;
+	long	size;
 
-	i = 0;
-	if (n == 0)
+	size = 0;
+	if (nb == 0)
 		return (1);
-	while (n != 0)
+	if (nb < 0)
 	{
-		n /= 10;
-		i++;
+		size++;
+		nb = nb * (-1);
 	}
-	return (i);
+	while (nb > 0)
+	{
+		nb = nb / 10;
+		size++;
+	}
+	return (size);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int nb)
 {
-	char		*res;
-	size_t		count;
-	long int	number;
+	long	number;
+	long	i;
+	char	*str;
 
-	number = n;
-	count = ft_count(n);
+	number = nb;
+	i = find_size(number) - 1;
+	str = malloc(sizeof(char) * (i + 1));
+	if (!str)
+		return (NULL);
+	str[i] = '\0';
+	if (number == 0)
+		str[0] = '0';
 	if (number < 0)
 	{
-		number *= -1;
-		count++;
-	}
-	res = malloc(sizeof(char *) * (count + 1));
-	if (!res)
-		return (NULL);
-	res[count] = '\0';
-	if (n == 0)
-	{
-		res[0] = '0';
-		return (res);
+		str[0] = '-';
+		number = number * (-1);
 	}
 	while (number > 0)
 	{
-		res[--count] = number % 10 + 48;
-		number /= 10;
+		str[i] = number % 10 + '0';
+		i--;
+		number = number / 10;
 	}
-	return (res);
+	return (str);
 }
