@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:56:45 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 14:19:02 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/03 16:22:35 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	ft_putnbr_fd(int n, int fd)
 		nb *= -1;
 		ft_putchar_fd('-', fd);
 	}
-	if (nb >= 9)
+	if (nb > 9)
 	{
 		ft_putnbr_fd(nb / 10, fd);
 	}
-	ft_putnbr_fd((nb % 10) + '0', fd);
+	ft_putchar_fd((nb % 10) + '0', fd);
 }

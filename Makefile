@@ -6,7 +6,7 @@
 #    By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/12/02 15:09:46 by arpenel          ###   ########.fr        #
+#    Updated: 2024/12/03 16:16:13 by arpenel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ FILES = ft_memset \
 		ft_split \
 		ft_itoa \
 		ft_strmapi \
+		ft_striteri \
 		ft_putchar_fd \
 		ft_putstr_fd \
 		ft_putendl_fd \

@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:34:42 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 14:18:27 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/03 16:25:22 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ long	find_size(long nb)
 	}
 	while (nb > 0)
 	{
-		nb = nb / 10;
+		nb /= 10;
 		size++;
 	}
 	return (size);
@@ -38,24 +38,26 @@ char	*ft_itoa(int nb)
 	long	i;
 	char	*str;
 
-	number = nb;
-	i = find_size(number) - 1;
+	number = (long)nb;
+	i = find_size(number);
 	str = malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
 	str[i] = '\0';
 	if (number == 0)
+	{
 		str[0] = '0';
+		return (str);
+	}
 	if (number < 0)
 	{
 		str[0] = '-';
-		number = number * (-1);
+		number = -number;
 	}
 	while (number > 0)
 	{
-		str[i] = number % 10 + '0';
-		i--;
-		number = number / 10;
+		str[--i] = (number % 10) + 48;
+		number /= 10;
 	}
 	return (str);
 }
