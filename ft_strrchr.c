@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:32:39 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 16:50:28 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/03 16:55:46 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	i = ft_strlen(s);
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)&s[i]);
 	i--;
 	while (i > 0)
@@ -26,7 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i--;
 	}
-	if (s[0] == c)
+	if ((unsigned char)s[0] == (unsigned char)c)
 		return ((char *)&s[i]);
 	return (NULL);
 }

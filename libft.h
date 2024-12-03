@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 08:43:38 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/03 16:08:25 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/03 16:28:25 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_isdigit(int c);
 int	ft_isalnum(int c);
 int	ft_isascii(int c);
 int ft_isprint(int c);
-int	toupper(int c);
+int	ft_toupper(int c);
 int	ft_tolower(int c);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_atoi(const char *nptr);

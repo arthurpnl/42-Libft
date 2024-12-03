@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:34:25 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/02 14:19:10 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/03 17:56:34 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,11 @@ char	**ft_split(const char *s, char sep)
 	size_t	i;
 	size_t	j;
 
-	res = malloc(sizeof(char *) * (count_words((char *)s, sep) + 1));
 	if (!s)
-		return (0);
+		return (NULL);
+	res = malloc(sizeof(char *) * (count_words((char *)s, sep) + 1));
+	if (!res)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
