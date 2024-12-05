@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 00:34:51 by arpenel           #+#    #+#             */
-/*   Updated: 2024/11/25 17:29:10 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:03:12 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 	size_t	src_size;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
 	src_size = ft_strlen(src);
 	if (dst_size > 0)
 	{

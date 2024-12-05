@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/21 14:34:25 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/03 17:56:34 by arpenel          ###   ########.fr       */
+/*   Created: 2024/12/05 16:28:17 by arpenel           #+#    #+#             */
+/*   Updated: 2024/12/05 16:42:51 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,6 @@ char	*cpy_word(const char	*str, char sep, size_t len)
 	return (cpy);
 }
 
-void	ft_free(char **ft_split)
-{
-	size_t	i;
-
-	if (!ft_split)
-		return ;
-	i = 0;
-	while (ft_split[i])
-	{
-		free(ft_split[i])
-		{
-			free(split[i]);
-			i++;
-		}
-	free(split);
-	}
-}
-
 char	**ft_split(const char *s, char sep)
 {
 	char	**res;
@@ -101,11 +83,6 @@ char	**ft_split(const char *s, char sep)
 		else
 		{
 			res[j] = cpy_word(&s[i], sep, ft_len_words(&s[i], sep));
-			if (!res[j])
-			{
-				free_split(res);
-				return (NULL);
-			}
 			j++;
 			i = i + ft_len_words(&s[i], sep);
 		}

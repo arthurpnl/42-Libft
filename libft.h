@@ -6,7 +6,7 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 08:43:38 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/03 16:28:25 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:18:59 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ char	    *ft_strchr(const char *s, int c);
 void        *ft_memchr(const void *s, int c, size_t n);
 char	    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	    *ft_strrchr(const char *s, int c);
+void	    *ft_calloc(size_t nmemb, size_t size);
+char	    *ft_strdup(const char *s);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
@@ -40,6 +43,7 @@ size_t  ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 void	ft_bzero(void *s, size_t n);
+
 
 // additional functions //
 char	    *ft_substr(char const *s, unsigned int start, size_t len);
