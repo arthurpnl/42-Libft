@@ -6,77 +6,107 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 16:28:17 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/09 13:30:14 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/09 16:14:21 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-size_t    ft_countwords(const char *s, char c)
+int	ft_len_words(const char *str, char sep)
 {
-    size_t    i;
-    size_t    words;
+	size_t	i;
 
-    words = 0;
-    i = 0;
-    while (s[i])
-    {
-        if ((!i || s[i - 1] == c) && s[i] != c)
-            words++;
-        i++;
-    }
-    return (words);
+	i = 0;
+	while (str[i] && str[i] != sep)
+		i++;
+	return (i);
 }
 
-void    free_matrix(char **t)
+void	free_matrix(char **t)
 {
-    size_t    i;
+	size_t	i;
 
-    i = 0;
-    while (t[i])
-        free(t[i++]);
-    free(t);
+	i = 0;
+	while (t[i])
+		free(t[i++]);
+	free(t);
 }
 
-char    **ft_split(char const *s, char c)
+char	*cpy_word(const char *str, char sep, size_t len)
 {
-    size_t    i;
-    size_t    word;
-    char    **ret;
+	size_t	i;
+	char	*cpy;
 
-    ret = ft_calloc((ft_countwords(s, c) + 1), sizeof(*ret));
-    if (!ret)
-        return (NULL);
-    word = 0;
-    i = 0;
-    while (*s)
-    {
-        i = 1;
-        if (*s != c)
-        {
-            while (s[i] && s[i] != c)
-                i++;
-            ret[word] = malloc(i + 1);
-            if (!ret[word])
-                return (free_matrix(ret), NULL);
-            ft_strlcpy(ret[word++], s, i + 1);
-        }
-        s += i;
-    }
-    return (ret);
-}
-
-/*
-int	main(int argc, char **argv)
-{
-	if (argc != 2)
-		return (0);
-	char **tab = ft_split(argv[1], ' ');
-	int	i = 0;
-	while (tab[i])
+	i = 0;
+	cpy = malloc(sizeof(char) * (ft_len_words(str, sep) + 1));
+	if (!cpy)
+		return (NULL);
+	while (str[i] && i < len)
 	{
-		printf("%s\n", tab[i]);
+		cpy[i] = str[i];
 		i++;
 	}
+	cpy[i] = '\0';
+	return (cpy);
 }
-*/
+
+static int	count_words(const char *str, char sep)
+{
+	size_t	i;
+	size_t	words;
+
+	words = 0;
+	i = 0;
+	while (str[i])
+	{
+		if ((i == 0 || str[i - 1] == sep) && str[i] != sep)
+			words++;
+		i++;
+	}
+	return (words);
+}
+
+char	**ft_split(const char *s, char sep)
+{
+	char	**res;
+	size_t	i;
+	size_t	j;
+
+	if (!s)
+		return (NULL);
+	res = ft_calloc((count_words(s, sep) + 1), sizeof(*res));
+	if (!res)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (s[i] == sep)
+			i++;
+		else
+		{
+			res[j] = cpy_word(&s[i], sep, ft_len_words(&s[i], sep));
+			if (!res[j])
+				return (free_matrix(res), NULL);
+			j++;
+			i += ft_len_words(&s[i], sep);
+		}
+	}
+	return (res);
+}
+
+// int	main(int argc, char **argv)
+// {
+// 	(void)argc;
+// 	char **tab = ft_split(argv[1], argv[2][0]);
+// 	printf("TEST POURRIS = .%s \n", tab[1]);
+// 	int	i = 0;
+// 	while (tab[i])
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		free(tab[i]);
+// 		i++;
+// 	}
+// 	free(tab);
+// }
