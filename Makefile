@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/12/03 16:16:13 by arpenel          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 CC = gcc
@@ -67,8 +55,6 @@ OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $^
 
 all: $(NAME)
 
@@ -80,4 +66,4 @@ fclean: clean
 
 re: clean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re

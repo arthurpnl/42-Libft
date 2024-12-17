@@ -6,14 +6,14 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 16:28:17 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/09 16:14:21 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/17 16:39:40 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_len_words(const char *str, char sep)
+static int	ft_len_words(const char *str, char sep)
 {
 	size_t	i;
 
@@ -23,7 +23,7 @@ int	ft_len_words(const char *str, char sep)
 	return (i);
 }
 
-void	free_matrix(char **t)
+static void	free_matrix(char **t)
 {
 	size_t	i;
 
@@ -33,7 +33,7 @@ void	free_matrix(char **t)
 	free(t);
 }
 
-char	*cpy_word(const char *str, char sep, size_t len)
+static char	*cpy_word(const char *str, char sep, size_t len)
 {
 	size_t	i;
 	char	*cpy;

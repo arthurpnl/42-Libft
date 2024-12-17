@@ -6,13 +6,13 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:34:42 by arpenel           #+#    #+#             */
-/*   Updated: 2024/12/09 15:58:39 by arpenel          ###   ########.fr       */
+/*   Updated: 2024/12/17 16:40:55 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	find_size(long nb)
+static long	find_size(long nb)
 {
 	long	size;
 
