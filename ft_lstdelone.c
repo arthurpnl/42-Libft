@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 19:22:55 by arpenel           #+#    #+#             */
-/*   Updated: 2025/03/06 10:50:41 by arpenel          ###   ########.fr       */
+/*   Created: 2025/03/06 11:03:08 by arpenel           #+#    #+#             */
+/*   Updated: 2025/03/06 11:09:37 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list  *ft_lstlast(t_list *lst)
+void    ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    while (lst && lst->next)
-        lst = lst->next;
-    return (lst);
+    if (!lst)
+        return ;
+    if (del)
+        del(lst->content);
+    free(lst);
 }
