@@ -20,11 +20,11 @@
 # include <stddef.h>
 # include <stdarg.h>
 
-int		ft_strlen(char *str);
+int		ft_strlen_count(char *str);
 void	ft_putchar(char c, size_t *count);
 int		ft_printf(const char *format, ...);
 void	ft_putstr(char *str, size_t *count);
 void	ft_putnbr(int n, size_t *count);
-void	ft_putnbr_base(int nbr, char *base, size_t *count);
+void	ft_putnbr_base(unsigned long nbr, char *base, size_t *count);
 
 #endif
