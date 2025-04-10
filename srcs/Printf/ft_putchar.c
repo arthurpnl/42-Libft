@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 10:51:23 by arpenel           #+#    #+#             */
-/*   Updated: 2025/03/06 11:00:27 by arpenel          ###   ########.fr       */
+/*   Created: 2024/12/20 14:49:20 by arpenel           #+#    #+#             */
+/*   Updated: 2025/01/07 12:57:46 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void    ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_putchar(char c, size_t *count)
 {
-    if (!lst || !new)
-        return ;
-    if (*lst)
-        ft_lstlast(lst)->next = new;
-    else
-        *lst = new;
+	write(1, &c, 1);
+	(*count)++;
 }

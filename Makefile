@@ -1,59 +1,65 @@
-NAME = libft.a
+NAME    = libft.a
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
-RM = rm -f
+CC      = gcc
+CFLAGS  = -Wall -Wextra -Werror
+AR      = ar rcs
+RM      = rm -f
 
-FILES = ft_memset \
-		ft_bzero \
-		ft_memcpy \
-		ft_memmove \
-		ft_memchr \
-		ft_memcmp \
-		ft_strlen \
-		ft_strlcpy \
-		ft_strlcat \
-		ft_strchr \
-		ft_strrchr \
-		ft_strnstr \
-		ft_strncmp \
-		ft_atoi \
-		ft_isalpha \
-		ft_isdigit \
-		ft_isalnum \
-		ft_isascii \
-		ft_isprint \
-		ft_toupper \
-		ft_tolower \
-		ft_calloc \
-		ft_strdup \
-		ft_substr \
-		ft_strjoin \
-		ft_strtrim \
-		ft_split \
-		ft_itoa \
-		ft_strmapi \
-		ft_striteri \
-		ft_putchar_fd \
-		ft_putstr_fd \
-		ft_putendl_fd \
-		ft_putnbr_fd \
+FILES =  srcs/Libft/ft_memset \
+         srcs/Libft/ft_bzero \
+         srcs/Libft/ft_memcpy \
+         srcs/Libft/ft_memmove \
+         srcs/Libft/ft_memchr \
+         srcs/Libft/ft_memcmp \
+         srcs/Libft/ft_strlen \
+         srcs/Libft/ft_strlcpy \
+         srcs/Libft/ft_strlcat \
+         srcs/Libft/ft_strchr \
+         srcs/Libft/ft_strrchr \
+         srcs/Libft/ft_strnstr \
+         srcs/Libft/ft_strncmp \
+         srcs/Libft/ft_atoi \
+         srcs/Libft/ft_isalpha \
+         srcs/Libft/ft_isdigit \
+         srcs/Libft/ft_isalnum \
+         srcs/Libft/ft_isascii \
+         srcs/Libft/ft_isprint \
+         srcs/Libft/ft_toupper \
+         srcs/Libft/ft_tolower \
+         srcs/Libft/ft_calloc \
+         srcs/Libft/ft_strdup \
+         srcs/Libft/ft_substr \
+         srcs/Libft/ft_strjoin \
+         srcs/Libft/ft_strtrim \
+         srcs/Libft/ft_split \
+         srcs/Libft/ft_itoa \
+         srcs/Libft/ft_strmapi \
+         srcs/Libft/ft_putchar_fd \
+         srcs/Libft/ft_putstr_fd \
+         srcs/Libft/ft_putendl_fd \
+         srcs/Libft/ft_putnbr_fd \
+         srcs/Libft/ft_striteri \
+         srcs/Libft/ft_lstnew \
+         srcs/Libft/ft_lstadd_front \
+         srcs/Libft/ft_lstsize \
+         srcs/Libft/ft_lstlast \
+         srcs/Libft/ft_lstadd_back \
+         srcs/Libft/ft_lstdelone \
+         srcs/Libft/ft_lstclear \
+         srcs/Libft/ft_lstiter \
+         srcs/gnl/get_next_line \
+         srcs/Printf/ft_printf
 
-SRCS_DIR = ./
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
-
-OBJS_DIR = ./
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
-
-$(OBJ_DIR)%.o: $(SRCS_DIR)%.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(NAME): $(OBJS)
-	$(AR) $@ $^
-
+SRCS = $(addsuffix .c, $(FILES))
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -I includes -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
@@ -61,6 +67,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: clean all
+re: fclean all
 
 .PHONY: all clean fclean re
