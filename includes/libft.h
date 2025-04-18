@@ -6,18 +6,20 @@
 /*   By: arpenel <arpenel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 08:43:38 by arpenel           #+#    #+#             */
-/*   Updated: 2025/04/10 17:43:09 by arpenel          ###   ########.fr       */
+/*   Updated: 2025/04/18 16:22:12 by arpenel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include <stddef.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stddef.h>
+#include "get_next_line.h"
+#include "ft_printf.h"
 
 typedef struct s_list
 {
